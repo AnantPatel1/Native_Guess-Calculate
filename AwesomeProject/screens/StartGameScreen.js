@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { TextInput, View, StyleSheet, Alert } from "react-native";
 import PrimaryButton from "../component/PrimaryButton";
-function StartGameScreen() {
+function StartGameScreen({ onPickNumber }) {
   const [enteredNumber, setenteredNumber] = useState("");
 
   function numberInputHandler(eneteredText) {
@@ -22,6 +22,7 @@ function StartGameScreen() {
       return;
     }
     // isNan means is not a number
+    onPickNumber(chosenNumber);
   }
   return (
     <View style={styles.inputContainer}>
