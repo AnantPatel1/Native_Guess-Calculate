@@ -1,14 +1,14 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
-function PrimaryButton({ children }) {
-  const handelPress = () => {
-    console.log("Pressed");
-  };
+function PrimaryButton({ children, onButtonPress }) {
+  // const handelPress = () => {
+  //   console.log("Pressed");
+  // };
   //   android_ripple only works on android devides
   // for IOS devices, styles should be passed as a function , where pressed is true, when it is pressed and false when it is not
   return (
     <View style={styles.buttonOuterContainer}>
       <Pressable
-        onPress={handelPress}
+        onPress={onButtonPress}
         style={({ pressed }) =>
           pressed
             ? [styles.buttonInnerContainer, styles.buttonPressedOpacity]
