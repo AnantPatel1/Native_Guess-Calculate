@@ -1,4 +1,5 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
+import Colors from "../utils/colors";
 function PrimaryButton({ children, onButtonPress }) {
   // const handelPress = () => {
   //   console.log("Pressed");
@@ -15,7 +16,7 @@ function PrimaryButton({ children, onButtonPress }) {
             : styles.buttonInnerContainer
         }
         // if you want two or more styles classed to be added pass them in an array instead
-        // android_ripple={{ color: "#A73121" }}
+        android_ripple={{ color: Colors.primary400 }}
       >
         <Text style={styles.buttonText}>{children}</Text>
       </Pressable>
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
   buttonInnerContainer: {
-    backgroundColor: "#952323",
+    backgroundColor: Colors.primary100,
     paddingHorizontal: 16,
     paddingVertical: 8,
     elevation: 4,
